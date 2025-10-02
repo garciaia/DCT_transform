@@ -30,6 +30,8 @@ public class Convert {
     }
 
     public static void runCompression(String uncompressedFilename, String comprFilename, int quality, JpegEncoder.Subsampling subsampling) {
+        // quality: variable between 1-100. The smaller (= worse) the quality, the greater the compression
+        // subsampling: sampling factor. options: YUV_420, YUV_422, YUV_444 (also default)
         System.out.println("-------------------------------------------------------------------");
         System.out.println("Compressing file: " + uncompressedFilename + ", Saving into file: " + comprFilename);
         try {
